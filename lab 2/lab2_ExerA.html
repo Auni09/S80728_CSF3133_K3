@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HighSchool Reunion</title>
+    </head>
+    <body>
+
+        <header>
+            <h1>Highschool Reunion</h1>
+            <p>We grew up, changed paths, and somehow found our way back to the same table. </p>
+        </header>
+
+        <nav>
+            <a href="#about">About the Event</a> |
+            <a href="#schedule">Event schedule</a> |
+            <a href="#register">Registration</a> |
+        </nav>
+
+        <!--================== ABOUT SECTION=========================== -->
+        <section id="about">
+            <h2>About the event</h2>
+
+            <!-- Inside about the section, two article elements -->
+             <article>
+                <h3>Speaker: Cikgu Zarina</h3>
+                <p>Our beloved former Malay language teacher will be giving a special opening address to welcome back the graduating class.</p>
+             </article>
+
+             <article>
+                <h3>Memory Lane Photo Exhibition </h3>
+                <p>A dedicated gallery showcassing yearbooks, sports day trophies, and memorable photos submitted by classmates over the past decade .</p>
+             </article>
+            </section>
+
+            <!-- ============= EVENT SCEDULE TABLE ======================= -->
+             <section id="scedule">
+                <h2>Event Schedule</h2>
+                <table border="1">
+                    <tr>
+                        <th>Time</th>
+                        <th>Activity</th>
+                        <th>Venue</th>
+                        <th>Person in Charge</th>
+                    </tr>
+
+                    <tr>
+                        <td>09:30 AM - 10:00 AM</td>
+                        <td>Arrival & welcome breakfast</td>
+                        <td>School Courtyard</td>
+                        <td>Cikgu Azman</td>
+                    </tr>
+
+                    <tr>
+                        <td>11:00 AM -12:30 PM</td>
+                        <td>Campus tour & memory lane</td>
+                        <td>school library</td>
+                        <td>Cikgu Ahmad</td>
+                    </tr>
+
+                    <tr>
+                        <td>1:00 PM - 2:00 PM</td>
+                        <td>Teacher recognitions, memorial tributes for absent classmates, and video messages from afar.</td>
+                        <td>music class</td>
+                        <td>Cikgu Haniff</td>
+                    </tr>
+
+                    <tr>
+                        <td>3:00 PM - 4:00 PM</td>
+                        <td>Gala dinner & Time capsule closing.</td>
+                        <td>Canteen</td>
+                        <td>Miss Syirna.</td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- ======================= REGISTRATION FORM =========================-->
+            <section id="register">
+                <h2>Registration Form</h2>
+                <form action="register.html" method="post">
+
+                    <!-- Text inputs with matching labels -->
+                     <label for="fullname">Full Name:</label><br>
+                     <input type="text" id+="fullname" name="fullname"><br><br>
+
+                    <label for="student_id">Graduation / Student ID:</label><br>
+            <input type="text" id="student_id" name="student_id"><br><br>
+
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <!-- Radio buttons for Graduation Year sharing the same name -->
+            <label>Graduation Batch:</label><br>
+            <input type="radio" id="batch2019" name="grad_year" value="2019">
+            <label for="batch2019">Class of 2019</label><br>
+            <input type="radio" id="batch2020" name="grad_year" value="2020">
+            <label for="batch2020">Class of 2020</label><br>
+            <input type="radio" id="batch2021" name="grad_year" value="2021">
+            <label for="batch2020">Class of 2021</label><br>
+            <input type="radio" id="batch2022" name="grad_year" value="2022">
+            <label for="batch2022">Class of 2022</label><br><br>
+
+            <!-- Checkboxes for activities (at least 3 choices) -->
+            <label>Activities You Plan to Join (Select at least 3):</label><br>
+            <input type="checkbox" id="act_tour" name="activities" value="campus_tour">
+            <label for="act_tour">Campus Tour</label><br>
+            <input type="checkbox" id="act_trivia" name="activities" value="trivia">
+            <label for="act_trivia">Class Trivia Games</label><br>
+            <input type="checkbox" id="act_dinner" name="activities" value="gala_dinner">
+            <label for="act_dinner">Gala Dinner</label><br>
+            <input type="checkbox" id="act_photo" name="activities" value="photo_booth">
+            <label for="act_photo">Photo Booth Session</label><br><br>
+
+            <!-- Drop-down list for High School Programme -->
+            <label for="house">High School Programme:</label><br>
+            <select id="house" name="house">
+                <option value="science">Science Stream</option>
+                <option value="arts">Arts Stream</option>
+                <option value="commerce">Commerce Stream</option>
+                <option value="sports">Sports Academy</option>
+            </select><br><br>
+
+            <!-- Submit button -->
+            <input type="submit" value="Register for Reunion">
+
+        </form>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <p>Organised by High School Reunion Committee. Copyright &copy; 2026.</p>
+    </footer>
+
+</body>
+</html>
+
+
+                

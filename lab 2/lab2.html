@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Exercise 2 - Personal Profile Page</title>
+</head>
+<body>
+
+    <!-- 3. Semantic HTML: Header -->
+    <header>
+        <h1>Personal Profile Page</h1>
+        <hr>
+    </header>
+
+    <!-- 3. Semantic HTML: Navigation Bar -->
+    <nav>
+        <a href="#about">About Me</a> | 
+        <a href="#profile-table">Personal Information</a> | 
+        <a href="#registration-form">Registration Form</a>
+        <hr>
+    </nav>
+
+    <!-- 3. Semantic HTML: Main Content Section -->
+    <section id="about">
+        <!-- 3. Semantic HTML: Article -->
+        <article>
+            <h2>Welcome to My Profile</h2>
+            <p>Welcome! Thank you for visiting. Explore my portfolio to see my current projects, technical skills, and academic achievements.</p>
+        </article>
+    </section>
+
+    <br>
+
+    <!-- 1. Table Requirement (At least 3 rows & 3 columns) -->
+    <section id="profile-table">
+        <h2>Personal Information</h2>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Occupation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nur Auni</td>
+                    <td>21</td>
+                    <td>Software Engineering Student</td>
+                </tr>
+                <tr>
+            </tbody>
+        </table>
+    </section>
+
+    <br><hr><br>
+
+    <!-- 2. Form Requirement (Name, Email, Gender, Hobbies, Text, Radio, Checkbox, Submit) -->
+    <section id="registration-form">
+        <h2>Registration Form</h2>
+        <form action="submit_form.php" method="post">
+            
+            <!-- Text Input: Name -->
+            <label for="fullname">Full Name:</label><br>
+            <input type="text" id="fullname" name="fullname" required><br><br>
+
+            <!-- Text Input: Email -->
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <!-- Radio Buttons: Gender -->
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br><br>
+
+            <!-- Checkboxes: Favorite Hobbies -->
+            <label>Favorite Hobbies:</label><br>
+            <input type="checkbox" id="hobby1" name="hobbies" value="reading">
+            <label for="hobby1">Reading</label><br>
+            <input type="checkbox" id="hobby2" name="hobbies" value="gaming">
+            <label for="hobby2">Gaming</label><br>
+            <input type="checkbox" id="hobby3" name="hobbies" value="hiking">
+            <label for="hobby3">Hiking</label><br><br>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+
+        </form>
+    </section>
+
+    <br><hr>
+
+    <!-- 3. Semantic HTML: Footer -->
+    <footer>
+        <p>&copy; 2026 My Personal Profile Page. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

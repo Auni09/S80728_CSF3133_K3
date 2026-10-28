@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Course Feedback</title>
+</head>
+<body>
+    <!-- 
+        Error 1 (Line 11): Missing closing tag for the header section (</header>).
+        Error 2 (Line 12): Missing <li> tags or list structure inside <nav>, and the link '#Form' has an uppercase 'F' which should match the section id '#form' (case-sensitive or matching lowercase).
+        Error 3 (Line 18): Table header cells use <td> instead of <th> for the column headers, or missing <tr> structure. Specifically, line 20 uses <td>Rating</td> instead of <th>Rating</th>.
+        Error 4 (Line 27): Row for Week 2 uses colspan="3" instead of colspan="2" for the topic description cell, breaking the 3-column table structure.
+        Error 5 (Line 32): Typo in Semantic HTML text ("4.0" instead of "4.0"). Wait, Semantic HTML is missing table headings structure or closing tags. Let's look closely at line 32: <td>Semantic HTML<td>4.0</td> has a missing closing/opening tag slash (<td>Semantic HTML</td><td>4.0</td>).
+        Error 6 (Line 41): Radio buttons for rating have different `name` attributes ("good", "poor") instead of sharing the same name group (e.g., name="rating"), allowing multiple to be selected at once.
+        Error 7 (Line 42, 44): The <label> elements for the radio buttons wrap incorrectly or have mismatched `for` and `id` attributes (e.g., clicking the text label does nothing because the label isn't wrapping the input properly or lacks correct for/id mapping).
+        Error 8 (Line 46): Checkbox has `id="lab"` and `name="lab"`, but its label doesn't link correctly via `for`.
+        Error 9 (Line 52): Copyright year has a typo/entity error (&copy 2826) missing the semicolon (&copy; 2026).
+    -->
+    <header>
+        <h1>CSF3133 Course Feedback</h1>
+    </header>
+    <nav>
+        <a href="#results">Results</a> | <a href="#form">Feedback Form</a> | <a href="#comments">Student Comments</a>
+    </nav>
+    
+    <section id="results">
+        <h2>Feedback Summary</h2>
+        <table border="1">
+            <tr>
+                <th>Week</th>
+                <th>Topic</th>
+                <th>Rating</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Introduction to HTML</td>
+                <td>4.5</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td colspan="2">Tables and Forms</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Semantic HTML</td>
+                <td>4.0</td>
+            </tr>
+            <!-- Part 2, Step 5: Add rows for Week 4 and Week 5 with rowspan="2" and Average Rating -->
+            <tr>
+                <td>4</td>
+                <td rowspan="2">Mini Project</td>
+                <td>4.8</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>4.9</td>
+            </tr>
+            <tr>
+                <td colspan="2">Average Rating</td>
+                <td>4.44</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="form">
+        <h2>Give Your Feedback</h2>
+        <form action="submit_feedback.php" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+
+            <!-- Part 2, Step 6: Add E-mail text input -->
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email"><br>
+
+            <label>Overall rating:</label><br>
+            <input type="radio" id="good" name="rating" value="good">
+            <label for="good">Good</label><br>
+            
+            <!-- Part 2, Step 6: Third radio option "Average" -->
+            <input type="radio" id="average" name="rating" value="average">
+            <label for="average">Average</label><br>
+
+            <input type="radio" id="poor" name="rating" value="poor">
+            <label for="poor">Poor</label><br>
+
+            <label>Topics I want more practice on:</label><br>
+            <input type="checkbox" id="lab1" name="lab" value="yes">
+            <label for="lab1">I attended all labs</label><br>
+            
+            <!-- Part 2, Step 6: At least 3 checkboxes for topics -->
+            <input type="checkbox" id="top_html" name="more_practice[]" value="html">
+            <label for="top_html">HTML & Semantic Elements</label><br>
+            <input type="checkbox" id="top_table" name="more_practice[]" value="tables">
+            <label for="top_table">Advanced Tables & Rowspan</label><br>
+            <input type="checkbox" id="top_form" name="more_practice[]" value="forms">
+            <label for="top_form">Forms & Validation</label><br>
+
+            <!-- Part 2, Step 6: <select> for Section/Group (at least 3 options) -->
+            <label for="section_group">Section/Group:</label><br>
+            <select id="section_group" name="section_group">
+                <option value="sec1">Section 01</option>
+                <option value="sec2">Section 02</option>
+                <option value="sec3">Section 03</option>
+            </select><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <!-- Part 2, Step 7: New section for Student Comments -->
+    <section id="comments">
+        <h2>Student Comments</h2>
+        <article>
+            <h3>Ainul</h3>
+            <p>The lab exercises are very helpful for understanding web structures and HTML semantics!</p>
+        </article>
+        <article>
+            <h3>Wafa</h3>
+            <p>Managing table rows with rowspan and colspan took some practice, but it's clear now.</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>Copyright &copy; 2026 CSF3133</p>
+    </footer>
+</body>
+</html>
